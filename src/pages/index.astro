@@ -33,22 +33,22 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
-				<a
+				<h1 class='text-3xl font-bold'>Victor Lam</h1>
+				<!-- <a
 					href='https://github.com/srleom/astro-theme-resume.git'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
+				> -->
+					<!-- <span class='relative flex items-center justify-center'>
 						<span
 							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
 						></span>
 						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
+					</span> -->
 
-					<p class='font-medium'>Get free template</p>
+					<!-- <p class='font-medium'>Get free template</p> -->
 				</a>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
+					<Label title='Senior Quality Manager'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -56,7 +56,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='West Lafayette, Indiana'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -67,7 +67,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<Label
 						title='Connect on Linkedin'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
+						href='https://www.linkedin.com/in/victor-lam-3769524'
 						target='_blank'
 					>
 						<svg
@@ -87,13 +87,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				This is the start of a site that is all about the professional side of me. Please note that
+				This is still under construction and I'll be iterating though it's development and presenting
+				what meets my current defintion of done. Basically, pardon the dust, I'm still working on it.  
 			</p>
 		</Section>
-		{
+		<!-- {
 			allPostsByDate.length > 0 && (
 				<Section title='Posts'>
 					<ul class='flex flex-col gap-y-2'>
@@ -105,7 +104,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</ul>
 				</Section>
 			)
-		}
+		} -->
 
 		<Section title='Experience'>
 			<Card
@@ -214,7 +213,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<SkillLayout title='Others' skills={others} />
 		</Section>
 	</div>
-	<a
+	<!-- <a
 		href='https://github.com/srleom/astro-theme-resume.git'
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 	>
@@ -226,5 +225,5 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</span>
 
 		<p class='font-medium'>Get free template</p>
-	</a>
+	</a> -->
 </PageLayout>
