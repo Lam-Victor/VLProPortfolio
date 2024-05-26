@@ -12,14 +12,21 @@ import astro from '../assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-
+// template defined variables
+const languages = ['Javascript', 'Typescript', 'C#']
+const frontend = ['HTML', 'CSS', 'Javascript']
+const backend = ['C#']
+const quality = ['Selenium', 'Playwright']
+// template defined controls for blog post section 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+
+// user defined constants 
+const aboutText = `This is the start of a site that is all about the professional side of me. Please note that
+				This is still under construction and I'll be iterating though it's development and presenting
+				what meets my current defintion of done. Basically, pardon the dust, I'm still working on it.`
+
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -87,12 +94,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				This is the start of a site that is all about the professional side of me. Please note that
-				This is still under construction and I'll be iterating though it's development and presenting
-				what meets my current defintion of done. Basically, pardon the dust, I'm still working on it.  
+				{aboutText}
 			</p>
 		</Section>
-		<!-- {
+		{
 			allPostsByDate.length > 0 && (
 				<Section title='Posts'>
 					<ul class='flex flex-col gap-y-2'>
@@ -104,9 +109,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</ul>
 				</Section>
 			)
-		} -->
+		}
 
-		<Section title='Experience'>
+		<!-- <Section title='Experience'>
 			<Card
 				heading='Lorem Ipsum'
 				subheading='Sit amet consectetur'
@@ -204,15 +209,15 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://www.google.com'
 			/>
-		</Section>
+		</Section> 
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='Quality' skills={quality} />
 		</Section>
-	</div>
+	</div> -->
 	<!-- <a
 		href='https://github.com/srleom/astro-theme-resume.git'
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
