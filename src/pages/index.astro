@@ -12,14 +12,21 @@ import astro from '../assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-
+// template defined variables
+const languages = ['Javascript', 'Typescript', 'C#']
+const frontend = ['HTML', 'CSS', 'Javascript']
+const backend = ['C#']
+const quality = ['Selenium', 'Playwright']
+// template defined controls for blog post section 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+
+// user defined constants 
+const aboutText = `This is the start of a site that is all about the professional side of me. Please note that
+				This is still under construction and I'll be iterating though it's development and presenting
+				what meets my current defintion of done. Basically, pardon the dust, I'm still working on it.`
+
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -33,22 +40,22 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
-				<a
+				<h1 class='text-3xl font-bold'>Victor Lam</h1>
+				<!-- <a
 					href='https://github.com/srleom/astro-theme-resume.git'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
+				> -->
+					<!-- <span class='relative flex items-center justify-center'>
 						<span
 							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
 						></span>
 						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
+					</span> -->
 
-					<p class='font-medium'>Get free template</p>
+					<!-- <p class='font-medium'>Get free template</p> -->
 				</a>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
+					<Label title='Senior Quality Manager'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -56,7 +63,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='West Lafayette, Indiana'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -67,7 +74,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<Label
 						title='Connect on Linkedin'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
+						href='https://www.linkedin.com/in/victor-lam-3769524'
 						target='_blank'
 					>
 						<svg
@@ -87,10 +94,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				{aboutText}
 			</p>
 		</Section>
 		{
@@ -107,7 +111,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			)
 		}
 
-		<Section title='Experience'>
+		<!-- <Section title='Experience'>
 			<Card
 				heading='Lorem Ipsum'
 				subheading='Sit amet consectetur'
@@ -205,16 +209,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://www.google.com'
 			/>
-		</Section>
+		</Section> 
 
 		<Section title='Skills'>
 			<SkillLayout title='Languages' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='Quality' skills={quality} />
 		</Section>
-	</div>
-	<a
+	</div> -->
+	<!-- <a
 		href='https://github.com/srleom/astro-theme-resume.git'
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 	>
@@ -226,5 +230,5 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</span>
 
 		<p class='font-medium'>Get free template</p>
-	</a>
+	</a> -->
 </PageLayout>

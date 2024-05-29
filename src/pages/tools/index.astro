@@ -3,12 +3,12 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
-const DESIGN = [
+const QUALITY = [
 	{
-		name: 'Figma',
-		description: 'Design Tool',
-		href: 'https://www.figma.com/',
-		iconPath: 'figma',
+		name: 'Playwright',
+		description: 'End to end Test Automation Tool',
+		href: 'https://playwright.dev',
+		iconPath: 'playwright',
 		iconBgColour: '#000001'
 	}
 ]
@@ -79,9 +79,9 @@ const DEVELOPMENT = [
 				<p>Tools and software I use daily</p>
 			</div>
 
-			<ToolSection title='Design' tools={DESIGN} />
-			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
-			<ToolSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='Quality' tools={QUALITY} />
+			<!-- <ToolSection title='Productivity' tools={PRODUCTIVITY} />
+			<ToolSection title='Development' tools={DEVELOPMENT} /> -->
 		</div>
 	</div>
 </PageLayout>
