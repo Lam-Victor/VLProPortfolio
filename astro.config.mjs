@@ -15,7 +15,7 @@ import vercel from '@astrojs/vercel/serverless'
 export default defineConfig({
 
 	site: 'https://lam-victor.gihub.io',
-	base: 'VLProPortfolio',
+	base: '',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
