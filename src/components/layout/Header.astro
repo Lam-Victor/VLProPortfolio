@@ -1,5 +1,7 @@
 ---
+import base from "astro.config.mjs";
 
+const siteBase = base.base;
 ---
 
 <header class='mb-12 flex w-full flex-wrap pb-3 text-sm sm:flex-nowrap sm:justify-start'>
@@ -11,13 +13,13 @@
 
 		<div class='flex flex-row items-center justify-center gap-x-5 sm:gap-x-7'>
 			<a
-				href='/blog'
+				href={siteBase + "/blog"}
 				class='flex-none text-[1.05rem] font-medium hover:text-foreground/75'
 				aria-label='Nav Menu Item'
 				>Blog
 			</a>
 			<a
-				href='/tools'
+				href={siteBase + "/tools"}'
 				class='flex-none text-[1.05rem] font-medium hover:text-foreground/75'
 				aria-label='Nav Menu Item'
 				>Tools
