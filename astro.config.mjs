@@ -14,7 +14,7 @@ import vercel from '@astrojs/vercel/serverless'
 //https://astro.build/config
 export default defineConfig({
 
-	site: 'https://lam-victor.gihub.io',
+	site: 'https://lam-victor.gihub.io/VLProPortfolio',
 	base: '',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
